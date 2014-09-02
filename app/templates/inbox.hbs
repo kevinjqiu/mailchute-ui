@@ -1,0 +1,21 @@
+<h1>{{inboxName}}</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each emails}}
+        <tr>
+            <td>
+                {{ created_at }}
+            </td>
+            <td>
+                {{ subject }}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+<header class="navbar navbar-static-top" id="top" role="banner">
+    <nav class="navbar navbar-default" style="padding-left: 50px" role="navigation">
+        <div class="navbar-header">
+            {{#link-to "index" class="navbar-brand"}}
+                {{applicationName}}
+            {{/link-to}}
+        </div>
+        <div class="collapse navbar-collapse">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <label>Go to your inbox</label>
+                    {{ input type="text" class="form-control" placeholder="your-inbox" valueBinding="controller.inboxId" }}
+                    <label>@{{domainName}}</label>
+                </div>
+                <button class="btn btn-success" {{action "go"}}>
+                    Go
+                    <i class="glyphicon glyphicon-play"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+</header>
+<main class="bs-docs-masthead" id="content" role="main">
+    {{outlet}}
+</main>
