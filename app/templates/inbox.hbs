@@ -10,10 +10,10 @@
     {{#each emails}}
         <tr>
             <td>
-                {{ created_at }}
+                {{format-date created_at}}
             </td>
             <td>
-                {{ subject }}
+                {{subject}}
             </td>
         </tr>
     {{/each}}

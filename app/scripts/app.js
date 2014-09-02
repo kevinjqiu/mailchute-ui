@@ -18,6 +18,10 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
     }
 });
 
+Ember.Handlebars.helper('format-date', function(date) {
+    return moment(date).fromNow();
+});
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');
