@@ -9,7 +9,7 @@
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <label>Go to your inbox</label>
-                    {{ input type="text" class="form-control" placeholder="your-inbox" valueBinding="controller.inboxId" }}
+                    {{ input type="text" class="form-control" placeholder="your-inbox" valueBinding="inboxId" }}
                     <label>@{{domainName}}</label>
                 </div>
                 <button class="btn btn-success" {{action "go"}}>
