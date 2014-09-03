@@ -13,7 +13,7 @@
                 {{format-date created_at}}
             </td>
             <td>
-                {{#link-to "email" controllers.application.inboxName raw_message_id}}
+                {{#link-to "email" controller.inboxName raw_message_id}}
                     {{subject}}
                 {{/link-to}}
             </td>
