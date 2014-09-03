@@ -10,3 +10,8 @@ Mailchute.Inbox = DS.Model.extend({
     name: attr('string'),
     emails: attr()
 });
+
+
+Mailchute.Email = DS.Model.extend({
+    message: attr()
+});

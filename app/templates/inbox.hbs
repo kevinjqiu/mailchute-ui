@@ -1,4 +1,4 @@
-<h1>{{inboxName}}</h1>
+<h1>{{controllers.application.inboxName}}</h1>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -13,7 +13,9 @@
                 {{format-date created_at}}
             </td>
             <td>
-                {{subject}}
+                {{#link-to "email" controllers.application.inboxName raw_message_id}}
+                    {{subject}}
+                {{/link-to}}
             </td>
         </tr>
     {{/each}}

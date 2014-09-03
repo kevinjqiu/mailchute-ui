@@ -18,6 +18,11 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
     }
 });
 
+Mailchute.InboxController = Ember.ObjectController.extend({
+    needs: 'application',
+    inboxName: null
+});
+
 Ember.Handlebars.helper('format-date', function(date) {
     return moment(date).fromNow();
 });
