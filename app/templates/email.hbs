@@ -1,23 +1,33 @@
-<h1>{{inboxName}}</h1>
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Time</th>
-            <th>Subject</th>
-        </tr>
-    </thead>
-    <tbody>
-    {{#each}}
-        <tr>
-            <td>
-                {{format-date created_at}}
-            </td>
-            <td>
-                {{#link-to "email" controller.inboxName}}
-                    {{subject}}
-                {{/link-to}}
-            </td>
-        </tr>
-    {{/each}}
-    </tbody>
-</table>
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">{{inboxName}}</h3></div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>From</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each}}
+            <tr>
+                <td>
+                    {{format-date created_at}}
+                </td>
+                <td>
+                    {{sender}}
+                </td>
+                <td>
+                    {{#link-to "email" controller.inboxName}}
+                        {{subject}}
+                    {{/link-to}}
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<div class="panel panel-default">
+    {{message}}
+</div>
