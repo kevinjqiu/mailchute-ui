@@ -13,7 +13,15 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
     }.property('inboxId', 'domainName'),
     actions: {
         go: function() {
-            this.transitionToRoute('email', this.get('inboxName'));
+            this.transitionToRoute('emails', this.get('inboxName'));
+        }
+    }
+});
+
+Mailchute.EmailsController = Ember.ArrayController.extend({
+    actions: {
+        showemail: function(email) {
+            console.log(email);
         }
     }
 });

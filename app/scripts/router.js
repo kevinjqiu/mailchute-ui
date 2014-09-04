@@ -1,5 +1,5 @@
 Mailchute.Router.map(function () {
-    this.route('email', {
+    this.route('emails', {
         path: 'emails/:inbox_name'
     });
 });

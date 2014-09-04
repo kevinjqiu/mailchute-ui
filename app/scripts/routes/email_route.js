@@ -1,4 +1,4 @@
-Mailchute.EmailRoute = Ember.Route.extend({
+Mailchute.EmailsRoute = Ember.Route.extend({
     model: function(params) {
         this.set('inboxName', params.inbox_name);  // TODO: is this the best place for this kind of stuff?
         return this.store.find('email', {inbox: params.inbox_name});

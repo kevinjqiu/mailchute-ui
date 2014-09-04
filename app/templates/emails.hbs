@@ -18,9 +18,9 @@
                     {{sender}}
                 </td>
                 <td>
-                    {{#link-to "email" controller.inboxName}}
+                    <a href="#" {{action "showemail" this}}>
                         {{subject}}
-                    {{/link-to}}
+                    </a>
                 </td>
             </tr>
         {{/each}}
