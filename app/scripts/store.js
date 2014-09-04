@@ -6,12 +6,10 @@ Mailchute.ApplicationAdapter = DS.RESTAdapter.extend({
 var attr = DS.attr;
 
 
-Mailchute.Inbox = DS.Model.extend({
-    name: attr('string'),
-    emails: attr()
-});
-
-
 Mailchute.Email = DS.Model.extend({
-    message: attr()
+    sender: attr('string'),
+    recipient: attr('string'),
+    created_at: attr('date'),  // Why camel case doesn't work?
+    subject: attr('string'),
+    raw_message_id: attr('string')
 });
