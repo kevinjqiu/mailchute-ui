@@ -21,9 +21,10 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
 Mailchute.EmailsController = Ember.ArrayController.extend({
     actions: {
         showemail: function(email) {
-            console.log(email.get('raw_message'));
-            // this.set("message", "foobar");
-            debugger;
+            var that = this;
+            email.get('raw_message').then(function(result){
+                that.set("message", result.get("message"));
+            });
         }
     }
 });
