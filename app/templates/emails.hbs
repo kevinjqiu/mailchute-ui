@@ -29,5 +29,21 @@
 </div>
 
 <div class="panel panel-default">
-    {{message}}
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>From: </td>
+                <td>{{current_sender}}</td>
+            </tr>
+            <tr>
+                <td>Subject: </td>
+                <td>{{current_subject}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    {{message}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

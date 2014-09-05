@@ -19,7 +19,6 @@ Mailchute.Email = DS.Model.extend({
     recipient: attr(),
     created_at: attr('date'),  // Why camel case doesn't work?
     subject: attr(),
-    // raw_message: belongsTo('raw_message', {async: true})
     raw_message: belongsTo('raw_message', {async: true})
 });
 
