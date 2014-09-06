@@ -16,10 +16,10 @@
                     <button type="button" class="btn btn-default glyphicon glyphicon-trash" {{action "deleteEmail" this}}></button>
                 </td>
                 <td>
-                    {{format-date created_at}}
+                    {{sender}}
                 </td>
                 <td>
-                    {{sender}}
+                    {{format-date created_at}}
                 </td>
                 <td>
                     <a href="#" {{action "showEmail" this}}>
