@@ -19,9 +19,8 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
 });
 
 Mailchute.EmailsController = Ember.ArrayController.extend({
-    hideEmailPanel: true,
     actions: {
-        showeMail: function(email) {
+        showEmail: function(email) {
             var that = this;
             email.get('raw_message').then(function(result){
                 that.set("message", result.get("message"));
