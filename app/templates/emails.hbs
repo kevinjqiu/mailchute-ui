@@ -3,8 +3,9 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Time</th>
+                <th>Actions</th>
                 <th>From</th>
+                <th>Time</th>
                 <th>Subject</th>
             </tr>
         </thead>
@@ -12,13 +13,16 @@
         {{#each}}
             <tr>
                 <td>
+                    <button type="button" class="btn btn-default glyphicon glyphicon-trash" {{action "deleteEmail" this}}></button>
+                </td>
+                <td>
                     {{format-date created_at}}
                 </td>
                 <td>
                     {{sender}}
                 </td>
                 <td>
-                    <a href="#" {{action "showemail" this}}>
+                    <a href="#" {{action "showEmail" this}}>
                         {{subject}}
                     </a>
                 </td>
@@ -28,7 +32,7 @@
     </table>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-default email-body hide">
     <table class="table table-bordered">
         <tbody>
             <tr>
