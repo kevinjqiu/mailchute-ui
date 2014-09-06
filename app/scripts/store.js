@@ -2,7 +2,7 @@ Mailchute.ApplicationAdapter = DS.RESTAdapter.extend({
     host: 'http://mail.idempotent.ca:8080',
     pathForType: function(type) {
         if (type == 'rawMessage') {
-            return 'raw_messages';  // WHY DO I HAVE TO DO THIS???
+            return 'raw_messages';  // TODO: WHY DO I HAVE TO DO THIS???
             // I HATE CONVENTION OVER CONFIGURATION
         }
         return this._super(type);
@@ -17,7 +17,7 @@ var attr = DS.attr
 Mailchute.Email = DS.Model.extend({
     sender: attr(),
     recipient: attr(),
-    created_at: attr('date'),  // Why camel case doesn't work?
+    created_at: attr('date'),  // TODO: Why camel case doesn't work?
     subject: attr(),
     raw_message: belongsTo('raw_message', {async: true})
 });

@@ -27,13 +27,14 @@ Mailchute.EmailsController = Ember.ArrayController.extend({
             });
             this.set('current_sender', email.get('sender'));
             this.set('current_subject', email.get('subject'));
-            // Doing DOM manipulation in the controller
+            // TODO: Doing DOM manipulation in the controller
             // This must be a code smell
             $(".email-body").removeClass("hide");
         },
         deleteEmail: function(email) {
             email.deleteRecord();
             email.save();
+            // TODO: why doesn't this update the view???
         }
     }
 });
