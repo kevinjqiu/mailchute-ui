@@ -10,7 +10,8 @@
             </tr>
         </thead>
         <tbody>
-        {{#each itemController="email"}}
+        {{#if length}}
+            {{#each itemController="email"}}
             <tr>
                 <td>
                     <button type="button" class="btn btn-default glyphicon glyphicon-trash" {{action "deleteEmail"}}></button>
@@ -27,7 +28,14 @@
                     </a>
                 </td>
             </tr>
-        {{/each}}
+            {{/each}}
+        {{else}}
+            <tr>
+                <td colspan="4">
+                    <h3 class="text-center">No emails for {{inboxName}}</h3>
+                </td>
+            </tr>
+        {{/if}}
         </tbody>
     </table>
 </div>
