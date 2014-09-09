@@ -10,10 +10,10 @@
             </tr>
         </thead>
         <tbody>
-        {{#each}}
+        {{#each itemController="email"}}
             <tr>
                 <td>
-                    <button type="button" class="btn btn-default glyphicon glyphicon-trash" {{action "deleteEmail" this}}></button>
+                    <button type="button" class="btn btn-default glyphicon glyphicon-trash" {{action "deleteEmail"}}></button>
                 </td>
                 <td>
                     {{sender}}

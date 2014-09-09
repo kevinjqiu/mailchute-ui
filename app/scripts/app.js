@@ -18,27 +18,6 @@ Mailchute.ApplicationController = Ember.ObjectController.extend({
     }
 });
 
-Mailchute.EmailsController = Ember.ArrayController.extend({
-    actions: {
-        showEmail: function(email) {
-            var that = this;
-            email.get('raw_message').then(function(result){
-                that.set("message", result.get("message"));
-            });
-            this.set('current_sender', email.get('sender'));
-            this.set('current_subject', email.get('subject'));
-            // TODO: Doing DOM manipulation in the controller
-            // This must be a code smell
-            $(".email-body").removeClass("hide");
-        },
-        deleteEmail: function(email) {
-            email.deleteRecord();
-            email.save();
-            // TODO: why doesn't this update the view???
-        }
-    }
-});
-
 Ember.Handlebars.helper('format-date', function(date) {
     return moment(date).fromNow();
 });
